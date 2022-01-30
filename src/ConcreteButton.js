@@ -24,7 +24,7 @@ function toTitleCase(string) {
  */
 export default class ConcreteButton extends VideoJsButtonClass {
 
-    /**
+  /**
      * Button constructor.
      *
      * @param {Player} player - videojs player instance
@@ -36,7 +36,7 @@ export default class ConcreteButton extends VideoJsButtonClass {
     });
   }
 
-    /**
+  /**
      * Creates button items.
      *
      * @return {Array} - Button items
@@ -45,7 +45,7 @@ export default class ConcreteButton extends VideoJsButtonClass {
     return [];
   }
 
-    /**
+  /**
      * Create the menu and add all items to it.
      *
      * @return {Menu}
@@ -56,7 +56,7 @@ export default class ConcreteButton extends VideoJsButtonClass {
 
     this.hideThreshold_ = 0;
 
-        // Add a title list item to the top
+    // Add a title list item to the top
     if (this.options_.title) {
       const titleEl = Dom.createEl('li', {
         className: 'vjs-menu-title',
@@ -73,7 +73,7 @@ export default class ConcreteButton extends VideoJsButtonClass {
     this.items = this.createItems();
 
     if (this.items) {
-            // Add menu items to the menu
+      // Add menu items to the menu
       for (let i = 0; i < this.items.length; i++) {
         menu.addItem(this.items[i]);
       }

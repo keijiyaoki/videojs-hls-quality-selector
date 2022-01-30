@@ -8,7 +8,7 @@ const VideoJsMenuItemClass = videojs.getComponent('MenuItem');
  */
 export default class ConcreteMenuItem extends VideoJsMenuItemClass {
 
-    /**
+  /**
      * Menu item constructor.
      *
      * @param {Player} player - vjs player
@@ -27,17 +27,17 @@ export default class ConcreteMenuItem extends VideoJsMenuItemClass {
     this.plugin = plugin;
   }
 
-    /**
+  /**
      * Click event for menu item.
      */
   handleClick() {
 
-        // Reset other menu items selected status.
+    // Reset other menu items selected status.
     for (let i = 0; i < this.qualityButton.items.length; ++i) {
       this.qualityButton.items[i].selected(false);
     }
 
-        // Set this menu item to selected, and set quality.
+    // Set this menu item to selected, and set quality.
     this.plugin.setQuality(this.item.value);
     this.selected(true);
 
